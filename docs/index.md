@@ -3,22 +3,23 @@
 layout: home
 
 hero:
-  name: "FE-System"
-  text: "打造全面的前端知识体系"
-  tagline: Build a comprehensive front-end knowledge system
+  name: "Full Stack Blog"
+  text: "前端与后端开发实践"
+  tagline: Notes and practices for frontend and backend development
   image:
     src: /img.jpg
-    alt: FE
+    alt: Full Stack Blog
   actions:
     - theme: brand
-      text: 体系脑图
-      link: /tree
+      text: 前端内容
+      link: /frontend/
+    - theme: alt
+      text: 后端内容
+      link: /backend/
 
 features:
-  - title: 基础
-    details: JS是前端的根基，万物的起源
-  - title: 进阶
-    details: 需要翻越大量的优秀框架轮子的源码，理解思想 -> 输出思想
-  - title: 精进
-    details: 高级前端 -> 前端专家
+  - title: 前端
+    details: 从 JavaScript 基础到现代 Web 架构与工程化实践。
+  - title: 后端
+    details: 围绕 Python、FastAPI、Linux 与 Docker 构建服务端能力。
 ---

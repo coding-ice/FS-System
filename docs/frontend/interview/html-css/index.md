@@ -1,4 +1,4 @@
-# HTML & CSSS
+# HTML & CSS
 
 ## 什么是 SEO？有哪些常见的 SEO 方法？
 

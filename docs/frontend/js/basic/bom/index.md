@@ -8,7 +8,7 @@ Bom 全称是 Browser Object Model （浏览器对象模型）
 
 ## History & Hash
 
-这两个是非常重要的概念，前端路由的底层实现（监听路由的变化且不刷新页面），其本质是映射关系，path : component。
+这两个是非常重要的概念，客户端路由的底层实现（监听路由的变化且不刷新页面），其本质是映射关系，path : component。
 API 用法请直接查阅 MDN 文档。
 
 ### History

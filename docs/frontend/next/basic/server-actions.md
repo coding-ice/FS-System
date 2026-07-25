@@ -36,7 +36,7 @@ export default function Page() {
 
 ## 应用场景
 
-- 在 page router 中采用前后端分离的模式，后端需要先定义一个接口，然后前端调用接口，前后端进行交互
+- 在 page router 中采用传统接口调用模式时，需要先定义接口，再由客户端调用并完成数据交互
 - 在 app router 中，这种操作可以直接简化为 server actions
 
 ### Page Router

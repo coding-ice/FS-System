@@ -763,7 +763,7 @@ asyncAutomation(getData);
 ```
 
 - 利用 promise+生成器的方式变相实现解决回调地狱问题，其实就是`async await`的一个变种而已
-- 最早为**TJ**实现，**前端大神人物**
+- 最早由 **TJ** 实现，是 JavaScript 社区的知名开发者
 - async await 核心代码就类似这些，内部主动帮我们调用`.next`方法
 
 ### 3.5 最终解决回调地狱的办法
