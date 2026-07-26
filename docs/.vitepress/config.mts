@@ -122,7 +122,8 @@ export default defineConfig({
     },
 
     outline: {
-      level: [2, 5],
+      // 将页面的 H1 也纳入右侧目录；H2 及更低层级会按标题关系自动缩进。
+      level: [1, 5],
     },
 
     lastUpdated: {
