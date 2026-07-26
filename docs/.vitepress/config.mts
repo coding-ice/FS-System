@@ -1,9 +1,10 @@
 import { defineConfig } from "vitepress";
 import container from "markdown-it-container";
 import { renderSandbox } from "vitepress-plugin-sandpack";
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: "Full Stack Blog",
   description: "记录前端与后端开发实践的技术博客",
   markdown: {
@@ -130,4 +131,4 @@ export default defineConfig({
       text: "Last Updated",
     },
   },
-});
+}));
