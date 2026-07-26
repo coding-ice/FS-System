@@ -11,7 +11,7 @@ dom 的全称是 document object model （文档对象模型）
 ## Dom 树
 
 顾名思义，它是一个树结构，如下图所示
-![alt text](../../images/dom.png)
+![alt text](../images/dom.png)
 
 ## data-\*
 

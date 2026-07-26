@@ -19,15 +19,15 @@
 如果存在一个引用那么数字就进行递增，当一个对象的引用为 0 的时候就销毁  
 **弊端：循环引用 导致内存不会被销毁**
 
-<!-- ![alt text](../../images/counting.png#pic_center=300x300) -->
-<img src="../../images/counting.png" style="width: 380px; height: auto; margin: auto" />
+<!-- ![alt text](../images/counting.png#pic_center=300x300) -->
+<img src="../images/counting.png" style="width: 380px; height: auto; margin: auto" />
 
 ### 标记清除
 
 其本质：**可达性**  
 从根节点出发如果不存在该节点的引用，就应该被销毁，JS 引擎采用的就是该算法
 
-<img src="../../images/mark.png" style="width: 400px; height: auto; margin: auto" />
+<img src="../images/mark.png" style="width: 400px; height: auto; margin: auto" />
 
 **更多性能优化**
 
@@ -94,5 +94,5 @@ var add5 = add(5);
 add5(10);
 ```
 
-![alt text](../../images/closure-debug.png)  
+![alt text](../images/closure-debug.png)<br>
 所以只有该引用的变量会保留

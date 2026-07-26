@@ -27,7 +27,7 @@
   - 合成层： 开启 GPU 加速， opacity、transform、will-change （以牺牲内存为代价，不可过度使用）
 
 渲染图如下所示：  
-![render](../../images/render.png)
+![render](../images/render.png)
 
 ## async / defer
 

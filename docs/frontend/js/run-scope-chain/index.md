@@ -53,7 +53,7 @@ JS 引擎会初始化全局对象，在执行代码之前，会在堆 (heap) 内
 - setTimeout
   ...
 
-<img src="../../images/go.png" style="width: 400px; height: auto;" />
+<img src="../images/go.png" style="width: 400px; height: auto;" />
 
 ### ECS
 
@@ -68,10 +68,10 @@ js 引擎内部有一个**执行上下文栈**，是代码的调用栈
 解析图：
 
 **解析阶段**
-![GEC](../../images/gec.png)
+![GEC](../images/gec.png)
 
 **代码开始执行**
-![run](../../images/run.png)
+![run](../images/run.png)
 
 ### FEC
 
@@ -85,10 +85,10 @@ js 引擎内部有一个**执行上下文栈**，是代码的调用栈
 解析图：
 
 **解析阶段**
-![GEC](../../images/fec.png)
+![GEC](../images/fec.png)
 
 **代码开始执行**
-![run](../../images/func_run.png)
+![run](../images/func_run.png)
 
 ## 作用域
 

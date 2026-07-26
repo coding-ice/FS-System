@@ -25,7 +25,7 @@ const obj = { name: "ice", age: 24 };
 const name = "ice";
 ```
 
-!["memory"](../images/memory.png)
+!["memory"](./images/memory.png)
 
 ## 区分数据类型
 
@@ -94,7 +94,7 @@ Object.prototype.toString.call({}); // '[object Object]'
 
 我们知道，可以通过 toString 拿到更精确的数据类型，那么我们来实现一个 getDataType 工具函数
 
-<<< ../utils/getDataType.js
+<<< ./utils/getDataType.js
 
 ## 包装类
 

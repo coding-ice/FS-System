@@ -4,6 +4,7 @@
 
 当前已整理：
 
+- [Python](/backend/python/)
 - [Docker](/backend/docker/)
 
 后续将持续补充服务端应用、数据存储与接口设计等主题。
