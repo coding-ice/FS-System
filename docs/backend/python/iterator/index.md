@@ -12,6 +12,6 @@
 
 数据容器不保存遍历位置；迭代器保存游标。这样多个迭代器互不影响：
 
-<<< @/backend/python/iterator-generator/code/9sentence_iter_good.py
+<<< @/backend/python/iterator/code/9sentence_iter_good.py
 
 `SentenceIterator.__iter__()` 返回自身，因为它已经是迭代器；`Sentence.__iter__()` 返回新的 `SentenceIterator`，因为它是可重复遍历的数据容器。
