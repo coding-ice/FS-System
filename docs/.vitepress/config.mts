@@ -108,7 +108,8 @@ export default withMermaid(defineConfig({
           collapsed: false,
           items: [
             { text: "概览", link: "/backend/python/" },
-            { text: "迭代器与生成器", link: "/backend/python/iterator-generator/" },
+            { text: "迭代器", link: "/backend/python/iterator-generator/" },
+            { text: "生成器", link: "/backend/python/iterator-generator/generator" },
           ],
         },
         {
