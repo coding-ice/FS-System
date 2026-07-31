@@ -4,5 +4,5 @@
   "python-envs.workspaceSearchPaths": [
     "./**/.venv"
   ],
-  "python.terminal.activateEnvironment": true
+  "python.terminal.activateEnvironment": true,
 }
