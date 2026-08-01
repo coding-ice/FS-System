@@ -6,4 +6,4 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = ["fastapi[standard]>=0.140.7"]
 [tool.fastapi]
-entrypoint = "guide.13docs:app"
+entrypoint = "guide.14jsonable_encoder:app"
