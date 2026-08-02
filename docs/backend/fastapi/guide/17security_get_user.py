@@ -27,6 +27,9 @@ def get_user(username: str):
         raise HTTPException(status_code=404, detail="User not found")
     return User(**fake_users_db[username])
 
-@app.get("/users/me")
-def read_user(token: Annotated[str, Depends(oauth2_schema)]):
+def get_current_user(token: Annotated[str, Depends(oauth2_schema)]):
     return get_user(token)
+
+@app.get("/users/me")
+def read_user(user: Annotated[User, Depends(get_current_user)]):
+    return user
