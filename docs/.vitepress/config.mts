@@ -117,6 +117,7 @@ export default withMermaid(defineConfig({
           collapsed: false,
           items: [
             { text: "概览", link: "/backend/fastapi/" },
+            { text: "OAuth2 密码登录与 JWT", link: "/backend/fastapi/oauth2-jwt-login" },
           ],
         },
         {
