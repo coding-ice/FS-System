@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSONL 流式客户端</title>
+</head>
+<body>
+  <h3>JSONL 流式响应</h3>
+  <p id="status">正在连接…</p>
+  <pre id="output"></pre>
+  <script>
+    const status = document.querySelector("#status");
+    const output = document.querySelector("#output");
+
+    async function readJsonLines() {
+      try {
+        const response = await fetch("http://localhost:8000/messages/stream");
+        if (!response.ok || !response.body) {
+          throw new Error(`请求失败：HTTP ${response.status}`);
+        }
+
+        status.textContent = `已连接，响应类型：${response.headers.get("content-type")}`;
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          buffer += decoder.decode(value, { stream: !done });
+
+          const lines = buffer.split("\n");
+          buffer = lines.pop() ?? "";
+
+          for (const line of lines) {
+            if (!line.trim()) continue;
+            const message = JSON.parse(line);
+            output.textContent += `[${message.idx}] ${message.content}\n`;
+          }
+
+          if (done) break;
+        }
+
+        if (buffer.trim()) {
+          const message = JSON.parse(buffer);
+          output.textContent += `[${message.idx}] ${message.content}\n`;
+        }
+        status.textContent += "，流已结束。";
+      } catch (error) {
+        console.error("读取 JSONL 失败：", error);
+        status.textContent = `读取失败：${error.message}`;
+      }
+    }
+
+    readJsonLines();
+  </script>
+</body>
+</html>
