@@ -8,6 +8,7 @@ dependencies = [
     "fastapi[standard]>=0.140.7",
     "pwdlib[argon2]>=0.3.0",
     "pyjwt>=2.13.0",
+    "sqlmodel>=0.0.39",
 ]
 [tool.fastapi]
-entrypoint = "guide.19cors:app"
+entrypoint = "guide.20_sql.1engine_session:app"
