@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const eventSource = new EventSource('http://localhost:8000/events');
+
+    eventSource.onmessage = (event) => {
+      console.log(event.data);
+    };
+
+    eventSource.onopen = (event) => {
+      console.log('连接已建立！');
+    };
+
+    eventSource.addEventListener("update", (event) => {
+      console.log(JSON.parse(event.data));
+    });
+
+    eventSource.addEventListener("done", (event) => {
+      console.log('流已结束！');
+      eventSource.close();
+    });
+
+    eventSource.onerror = (event) => {
+      console.error(event);
+    };
+  </script>
+  
+</body>
+</html>

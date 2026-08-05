@@ -11,4 +11,4 @@ dependencies = [
     "sqlmodel>=0.0.39",
 ]
 [tool.fastapi]
-entrypoint = "guide.22jsonl:app"
+entrypoint = "guide.23sse:app"
