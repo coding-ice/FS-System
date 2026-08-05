@@ -110,6 +110,7 @@ export default withMermaid(defineConfig({
             { text: "概览", link: "/backend/python/" },
             { text: "迭代器", link: "/backend/python/iterator/" },
             { text: "生成器", link: "/backend/python/generator/" },
+            { text: "异步与上下文管理", link: "/backend/python/async-context/" },
           ],
         },
         {
