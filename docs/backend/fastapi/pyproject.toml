@@ -10,4 +10,4 @@ dependencies = [
     "pyjwt>=2.13.0",
 ]
 [tool.fastapi]
-entrypoint = "guide.18multi_middleware:app"
+entrypoint = "guide.19cors:app"
