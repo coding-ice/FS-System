@@ -63,6 +63,7 @@ async def get_hero(hero_id: str, session: SessionDeps):
 
 @app.patch("/heroes/{hero_id}", response_model=HeroPublic)
 async def update_hero(hero_id: str, data: UpdateHero, session: SessionDeps):
+    # 1. 获取数据
     hero = session.get(Hero, hero_id)
     if not hero:
         raise HTTPException(status_code=404, detail="Hero not found")
