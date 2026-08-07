@@ -19,7 +19,7 @@ sequenceDiagram
     A->>J: 使用 sub、exp 和密钥签名
     J-->>A: access_token
     A-->>C: { access_token, token_type: "bearer" }
-    C->>A: GET /users/me<br/>Authorization: Bearer &lt;token&gt;
+    C->>A: GET /users/me<br/>Authorization: Bearer token（省略）
     A->>J: 校验签名、算法与过期时间
     J-->>A: sub（用户名）
     A->>D: 再次查询当前用户
