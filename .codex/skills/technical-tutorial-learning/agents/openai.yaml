@@ -1,0 +1,4 @@
+interface:
+  display_name: "技术教程学习提炼"
+  short_description: "把技术教程提炼成中文核心知识、代码示例和练习实战指南"
+  default_prompt: "使用 $technical-tutorial-learning 把这篇教程提炼成带关键代码与练习的中文学习指南。"
