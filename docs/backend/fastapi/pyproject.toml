@@ -11,4 +11,4 @@ dependencies = [
     "sqlmodel>=0.0.39",
 ]
 [tool.fastapi]
-entrypoint = "guide.25_froentend.main:app"
+entrypoint = "guide.26mount.main:app"
