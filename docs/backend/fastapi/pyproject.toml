@@ -11,4 +11,4 @@ dependencies = [
     "sqlmodel>=0.0.39",
 ]
 [tool.fastapi]
-entrypoint = "guide.24background_tack:app"
+entrypoint = "guide.24metadata:app"
