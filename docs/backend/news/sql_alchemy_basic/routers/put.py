@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-
+  
 from ..deps import DB_DEPS
 from ..models import User
 from ..schemas import BaseUser, UpdateUser
@@ -14,5 +14,5 @@ async def update_user(user_id: int, user: UpdateUser, db: DB_DEPS) -> User:
 
     for key, value in user.model_dump(exclude_unset=True).items():
         setattr(db_user, key, value)
-        
+
     return db_user
