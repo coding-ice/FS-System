@@ -3,7 +3,7 @@ from datetime import UTC, datetime
 from typing import Annotated
 
 from fastapi import Depends, FastAPI
-from sqlalchemy import Integer, String, select
+from sqlalchemy import Integer, String, func, select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
@@ -74,6 +74,36 @@ async def get_users(db: DB_DEPS):
     return user
 
 user_ids = [1,2]
+
+
+# @app.get("/users/list")
+# async def get_users_list(db: DB_DEPS, offset: int = 0, limit: int = 10):
+#     result = await db.execute(select(User).offset(offset).limit(limit))
+#     return result.scalars().all()
+
+
+@app.get("/users/count")
+async def get_users_count(db: DB_DEPS):
+    # result = await db.execute(select(func.count(User.id)))
+    # return {
+    #     "total": result.scalar()
+    # }
+
+    # result = await db.execute(select(func.avg(User.age)))
+    # return {
+    #     "age": result.scalar()
+    # }
+
+    result = await db.execute(select(func.min(User.age)))
+    return {
+        "min": result.scalar()
+    }
+
+
+@app.get("/users/list")
+async def get_users_list(db: DB_DEPS, page: int = 0, page_size: int = 10):
+    result = await db.execute(select(User).offset(page * page_size).limit(page_size))
+    return result.scalars().all()
 
 
 # 模糊查询 与非 in 
