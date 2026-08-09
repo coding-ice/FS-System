@@ -10,4 +10,4 @@ dependencies = [
     "sqlalchemy[asyncio]>=2.0.51",
 ]
 [tool.fastapi]
-entrypoint = "sql_alchemy_basic.2deps:app"
+entrypoint = "sql_alchemy_basic.main:app"
