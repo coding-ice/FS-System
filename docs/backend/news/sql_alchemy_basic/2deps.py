@@ -72,6 +72,7 @@ class CreateUser(BaseUser):
 
 @app.post("/users", response_model=BaseUser)
 async def create_user(user: CreateUser, db: DB_DEPS):
+    # 先从 pydantic -> ORM
     u = User(**user.model_dump())
     db.add(u)
     return u
