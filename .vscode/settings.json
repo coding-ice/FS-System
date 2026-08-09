@@ -1,8 +1,0 @@
-{
-  "liveServer.settings.port": 5501,
-  "python.defaultInterpreterPath": "${workspaceFolder}/docs/backend/fastapi/.venv/bin/python",
-  "python-envs.workspaceSearchPaths": [
-    "./**/.venv"
-  ],
-  "python.terminal.activateEnvironment": true,
-}
