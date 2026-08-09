@@ -1,0 +1,11 @@
+from datetime import UTC, datetime
+
+
+def main():
+    print("Hello from news!")
+
+
+if __name__ == "__main__":
+    print(datetime.now(UTC).timestamp())
+    main()
+
