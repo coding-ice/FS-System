@@ -3,6 +3,7 @@ from datetime import UTC, datetime
 from typing import Annotated
 
 from fastapi import Depends, FastAPI
+from pydantic import BaseModel
 from sqlalchemy import Integer, String, func, select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -58,6 +59,22 @@ async def get_db():
             raise
 
 DB_DEPS = Annotated[AsyncSession, Depends(get_db)]
+
+
+class BaseUser(BaseModel):
+    username: str
+    age: int
+
+
+class CreateUser(BaseUser):
+    password: str
+
+
+@app.post("/users", response_model=BaseUser)
+async def create_user(user: CreateUser, db: DB_DEPS):
+    u = User(**user.model_dump())
+    db.add(u)
+    return u
 
 @app.get("/users")
 async def get_users(db: DB_DEPS):
