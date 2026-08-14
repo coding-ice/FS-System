@@ -1,6 +1,6 @@
 {
-  "pid": 51269,
+  "pid": 897,
   "version": "0.9.9",
-  "socketPath": "/Users/ice/Desktop/ice/FE-System/.codegraph/daemon.sock",
-  "startedAt": 1784987519177
+  "socketPath": "/Users/ice/Desktop/ice/FS-System/.codegraph/daemon.sock",
+  "startedAt": 1786550344393
 }
