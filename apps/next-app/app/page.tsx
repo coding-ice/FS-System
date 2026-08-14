@@ -8,6 +8,15 @@ export default function Home() {
         <Link href="/blog/1">Blog1</Link>
         <Link href="/blog/2">Blog2</Link>
       </div>
+      <Image
+        width={300}
+        height={1000}
+        src="https://web-cdn.gachifans.com/res/production/Spine/shiraxxshiraxx/Default/Home/BG.png"
+        alt="bg"
+        // unoptimized
+        // preload
+        // fetchPriority="high"
+      />
     </div>
   );
 }
