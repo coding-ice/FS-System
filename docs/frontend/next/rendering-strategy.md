@@ -112,7 +112,23 @@ const DynamicComponent = dynamic(() => import("./DynamicComponent"), {
 
 ## Streaming
 
-Streaming / loading.js ，允许逐步渲染页面内容：
+Streaming / `loading.js` 允许逐步渲染页面内容。它和 `cacheComponents`、`<Link>` 预取如何叠在一起，见 [流式、预渲染与预取](/frontend/next/streaming-prefetch)。
+
+```typescript
+// 使用 Suspense 实现流式渲染
+import { Suspense } from "react";
+
+export default function Page() {
+  return (
+    <div>
+      <h1>立即显示</h1>
+      <Suspense fallback={<p>加载中...</p>}>
+        <SlowComponent />
+      </Suspense>
+    </div>
+  );
+}
+```
 
 ```typescript
 // 使用 Suspense 实现流式渲染

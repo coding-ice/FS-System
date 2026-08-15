@@ -4,9 +4,7 @@ const Blog = async (props: PageProps<"/blog/[id]">) => {
   return (
     <div>
       <h1>Blog</h1>
-      <Suspense fallback={<div>Loading...</div>}>
-        <BlogContent {...props} />
-      </Suspense>
+      <BlogContent {...props} />
       <div>footer</div>
     </div>
   );
