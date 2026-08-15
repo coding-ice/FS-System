@@ -61,7 +61,6 @@ export default withMermaid(defineConfig({
             { text: "CSR / SSR / SSG / ISR", link: "/frontend/next/csr_ssr_ssg_isr" },
             { text: "渲染策略", link: "/frontend/next/rendering-strategy" },
             { text: "流式、预渲染与预取", link: "/frontend/next/streaming-prefetch" },
-            { text: "缓存", link: "/frontend/next/caching" },
             { text: "Server Actions", link: "/frontend/next/server-actions" },
           ],
         },
