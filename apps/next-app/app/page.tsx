@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Like from "./_components/Like";
+import Counter from "./_components/Counter";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Link href="/blog/2">Blog2</Link>
       </div>
       <Like />
+      <Counter />
     </div>
   );
 }
