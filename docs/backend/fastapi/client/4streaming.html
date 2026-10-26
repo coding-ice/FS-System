@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const getReply = async () => {
+      const body = await fetch("http://localhost:8000/reply?message=Hello").then(response => response.body);
+      const render = await body.getReader()
+      const textDecoder = new TextDecoder()
+
+      while (true) {
+        const {done, value} = await render.read()
+        if (done) break;
+        const text = textDecoder.decode(value)
+        console.log(text)
+      }
+    }
+
+    getReply()
+  </script>
+</body>
+</html>
