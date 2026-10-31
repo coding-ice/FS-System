@@ -6,7 +6,7 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 // https://vitepress.dev/reference/site-config
 export default withMermaid(defineConfig({
   title: "Full Stack Blog",
-  description: "记录前端与后端开发实践的技术博客",
+  description: "记录前端、后端与 Agent 学习笔记的技术博客",
   markdown: {
     config(md) {
       md.use(container, "sandbox", {
@@ -21,6 +21,7 @@ export default withMermaid(defineConfig({
     nav: [
       { text: "前端", link: "/frontend/", activeMatch: "^/frontend(?:/|$)" },
       { text: "后端", link: "/backend/", activeMatch: "^/backend(?:/|$)" },
+      { text: "Agent", link: "/agent/", activeMatch: "^/agent(?:/|$)" },
     ],
 
     sidebar: {
@@ -94,6 +95,20 @@ export default withMermaid(defineConfig({
             { text: "Web 安全", link: "/frontend/interview/security/" },
             { text: "网页关键指标", link: "/frontend/interview/web-vitals/" },
             { text: "缓存", link: "/frontend/interview/cache/" },
+          ],
+        },
+      ],
+
+      "/agent/": [
+        {
+          text: "Agent",
+          items: [{ text: "分类概览", link: "/agent/" }],
+        },
+        {
+          text: "模型基础",
+          collapsed: false,
+          items: [
+            { text: "Self-attention", link: "/agent/self-attention/" },
           ],
         },
       ],
